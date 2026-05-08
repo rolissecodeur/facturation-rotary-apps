@@ -33,7 +33,7 @@ const LoginForm = ({ onSwitchView }) => {
       showSuccess(`Bienvenue, ${fullName} !`, "Connexion réussie");
 
       // Redirection vers ton dashboard spécifique
-      setTimeout(() => navigate("/dashboard/factures"), 1000);
+      setTimeout(() => navigate("/dashboard"), 1000);
     } catch (error) {
       console.error("Erreur de connexion :", error);
       handleError(error);
