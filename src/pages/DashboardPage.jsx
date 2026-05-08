@@ -5,6 +5,7 @@ import {
   BarChart3, TrendingUp, Zap, FileStack, Activity 
 } from "lucide-react";
 import { useQueryClient } from "@tanstack/react-query";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion";
 
 import { SocketContext } from "../contexts/socket";
@@ -172,6 +173,7 @@ export default function DashboardPage() {
   );
 }
 
+// eslint-disable-next-line no-unused-vars
 const EntitySummary = ({ title, stats, icon: Icon, accent }) => (
     <div className="h-full bg-white dark:bg-gray-800 p-4 rounded-[2.5rem] border border-slate-100 dark:border-white/5 flex flex-col justify-between shadow-sm transition-all hover:border-[#f97316]/30">
         <div className="flex items-center gap-3">
