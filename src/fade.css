@@ -1,0 +1,15 @@
+/* src/fade.css */
+@keyframes fadeIn {
+    from {
+      background-color: rgba(79, 70, 229, 0.2); /* Couleur violette/indigo douce */
+      opacity: 0.5;
+    }
+    to {
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.7s ease-out forwards;
+  }

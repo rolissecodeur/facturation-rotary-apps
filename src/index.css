@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dans votre fichier CSS global, ex: src/index.css */
+
+@keyframes up-and-fade {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  /* 
+    On applique l'animation à la classe que vous avez utilisée dans votre JSX.
+    Tailwind détectera que cette classe existe et ne la purgera pas.
+  */
+  .animate-up-and-fade {
+    animation: up-and-fade 25s linear infinite;
+  }

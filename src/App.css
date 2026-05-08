@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Tangerine:wght@400;700&display=swap');
+
+
+* {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  /* background-color: red !important; */
+}
+
+
+
+.quicksand-500 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.quicksand-600 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.table thead tr th {
+  font-weight: 500 !important;
+}
+
+/* .quicksand-400 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+
+.quicksand-700 {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+} */
+
+/* src/index.css */
+
+
+
+
+
+/* -- Conteneur principal : la première bordure -- */
+.table-wrapper {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 8px; /* Espace entre la bordure et les cellules */
+  background-color: #f8fafc;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* -- La table elle-même -- */
+.superb-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 6px;
+  font-size: 0.9rem;
+}
+
+/* -- Cellules (th et td) -- */
+.superb-table th,
+.superb-table td {
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: background-color 0.2s ease-in-out;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+/* Bordures et arrondis sur les cellules des extrémités */
+.superb-table th:first-child,
+.superb-table td:first-child {
+  border-left: 1px solid #f1f5f9;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.superb-table th:last-child,
+.superb-table td:last-child {
+  border-right: 1px solid #f1f5f9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Séparateurs de colonnes */
+.superb-table th:not(:last-child),
+.superb-table td:not(:last-child) {
+  border-right: 1px solid #f1f5f9;
+}
+
+
+/* -- En-tête de la table (thead) -- */
+.superb-table thead th {
+  font-weight: 600;
+  color: #475569;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #f8fafc;
+}
+
+/* -- Lignes Zébrées -- */
+.superb-table tbody tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+.superb-table tbody tr:nth-child(odd) td {
+  background-color: #f9fafb;
+}
+
+/* -- Survol en mode clair -- */
+.superb-table tbody tr:hover td {
+  background-color: #f5f3ff; /* Violet clair pour le survol */
+}
+
+
+/* -- Style pour la cellule utilisateur -- */
+.user-cell { display: flex; align-items: center; gap: 12px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.user-name { font-weight: 500; color: #1e293b; }
+.user-email { font-size: 0.85rem; color: #64748b; }
+
+
+/* ================================================= */
+/*          DARK MODE (Palette adoucie)              */
+/* ================================================= */
+.dark .table-wrapper {
+  background-color: #111827; /* Fond général : gris-900 */
+  border-color: #374151;     /* Bordures : gris-700 */
+}
+
+.dark .superb-table th,
+.dark .superb-table td {
+  border-color: #374151;     /* Bordures des cellules : gris-700 */
+}
+
+.dark .superb-table thead th {
+  background-color: #111827; /* Fond de l'en-tête : gris-900 */
+  color: #9ca3af;           /* Texte de l'en-tête : gris-400 */
+}
+
+/* Lignes zébrées en mode sombre (plus subtil) */
+.dark .superb-table tbody tr:nth-child(even) td {
+  background-color: #1f2937; /* Ligne paire : gris-800 */
+}
+.dark .superb-table tbody tr:nth-child(odd) td {
+  background-color: #253143; /* Ligne impaire : un peu plus claire pour le contraste */
+}
+
+/* Survol subtil avec une superposition blanche transparente */
+.dark .superb-table tbody tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Couleurs de texte adoucies */
+.dark .user-name { color: #d1d5db; }    /* Texte principal : gris-300 */
+.dark .user-email { color: #9ca3af; } /* Texte secondaire : gris-400 */
+
+
+/* ================================================= */
+/*                     RESPONSIVE                    */
+/* ================================================= */
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+  .superb-table th,
+  .superb-table td {
+    padding: 12px 10px;
+    white-space: nowrap;
+  }
+}
+
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
